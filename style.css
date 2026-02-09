@@ -1,0 +1,181 @@
+/* ================= GLOBAL RESET ================= */
+/* Remove default browser margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= ICON STYLES ================= */
+/* Font Awesome icons styling */
+i {
+  font-size: 28px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #333;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
+i:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+/* ================= MAIN LAYOUT ================= */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  padding: 40px 0;
+}
+
+/* ================= SHOPPING CART CONTAINER ================= */
+.shopping-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 80%;
+  max-width: 1100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Slight hover animation */
+.shopping-card-container:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= TOTAL PRICE SECTION ================= */
+.total-price {
+  background: #212529;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.total {
+  color: #ffc107;
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+/* ================= PRODUCT LIST GRID ================= */
+.list-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+}
+
+/* ================= PRODUCT CARD ================= */
+.card {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  width: 18rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image styling */
+.card img {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ================= CARD BODY ================= */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Product title */
+.card-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Product description */
+.card-text {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+/* Product price */
+.unit-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #198754;
+  margin-bottom: 10px;
+}
+
+/* ================= QUANTITY CONTROLS ================= */
+.quantity {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* Align quantity buttons */
+.card-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* ================= DELETE & LIKE ICONS ================= */
+.fa-trash-alt {
+  color: #dc3545;
+}
+
+.fa-trash-alt:hover {
+  color: #b02a37;
+}
+
+/* Like button */
+.fa-heart {
+  color: #6c757d;
+}
+
+/* When liked */
+.fa-heart.liked {
+  color: red;
+  transition: color 0.3s ease;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .list-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-card-container {
+    width: 95%;
+  }
+}
